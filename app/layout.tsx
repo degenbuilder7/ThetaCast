@@ -9,8 +9,8 @@ import { ErrorBoundary } from "react-error-boundary";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "OnAirAI",
-  description: "Generate podcasts in your language on the fly using AI",
+  title: "ThetaCast",
+  description: "Podcasts on Theta Chain in all languages using AI",
   icons: {
     icon: '/icons/miclogo.svg'
   }

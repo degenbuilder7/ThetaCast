@@ -7,12 +7,16 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "youthful-seahorse-517.convex.cloud",
+        hostname: "combative-hummingbird-780.convex.cloud",
       },
       {
         protocol: "https",
         hostname: "img.clerk.com",
       },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+      }
     ],
   },
 };

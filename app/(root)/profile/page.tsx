@@ -53,7 +53,7 @@ const MyProfilePage = () => {
           <EmptyState
             title="You have not created any podcasts yet"
             buttonLink="/create-podcast"
-            buttonText="Create Podcast"
+            buttonText="Create Thetacast"
           />
         )}
       </section>

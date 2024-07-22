@@ -86,8 +86,8 @@ and many more, including code architecture and reusability
 |  <img src="assets/screenshots/home.png" alt="Home Page" style="border-radius:12px; max-width:100%;">  |
 | Discover Page |
 | <img src="assets/screenshots/discover.png" alt="Discover Page" style="border-radius:12px; max-width:100%;">   |
-| Create Podcast Page |
-| <img src="assets/screenshots/create.png" alt="Create Podcast Page" style="border-radius:12px; max-width:100%;"> |
+| Create Thetacast Page |
+| <img src="assets/screenshots/create.png" alt="Create Thetacast Page" style="border-radius:12px; max-width:100%;"> |
 | Podcast Details Page |
 |  <img src="assets/screenshots/podcast.png" alt="Podcast Details Page" style="border-radius:12px; max-width:100%;"> |
 | Profile Page |

@@ -2,7 +2,7 @@ import { ConvexError, v } from "convex/values";
 
 import { MutationCtx, mutation, query } from "./_generated/server";
 import { Id } from "./_generated/dataModel";
-import { rateLimit } from "@/lib/rateLimits";
+import { rateLimit } from "../lib/rateLimits";
 
 type User = {
   _id: string;
@@ -18,7 +18,7 @@ type User = {
 
 const INCREMENTPODCASTVIEWS = "incrementPodcastViews";
 
-// create podcast mutation
+// Create Thetacast mutation
 export const createPodcast = mutation({
   args: {
     audioStorageId: v.id("_storage"),
@@ -172,7 +172,7 @@ export const getPodcastById = query({
   },
 });
 
-// this query will get the podcasts based on the views of the podcast , which we are showing in the Trending Podcasts section.
+// this query will get the podcasts based on the views of the podcast , which we are showing in the Trending Thetacasts section.
 export const getTrendingPodcasts = query({
   handler: async (ctx) => {
     const podcast = await ctx.db.query("podcasts").collect();

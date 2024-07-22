@@ -6,7 +6,7 @@ import { SpeechCreateParams } from "openai/resources/audio/speech.mjs";
 import { getUser, getUserById, isUserSubscribed } from "./users";
 import { useQuery } from "convex/react";
 import { api, internal } from "./_generated/api";
-import { rateLimit, checkRateLimit, resetRateLimit } from "@/lib/rateLimits";
+import { rateLimit, checkRateLimit, resetRateLimit } from "../lib/rateLimits";
 import { UserIdentity } from "convex/server";
 
 /**
@@ -14,9 +14,10 @@ import { UserIdentity } from "convex/server";
  * if it has, return the same image or audio file
  */
 
+console.log(process.env.NEXT_PUBLIC_APP_OPENAI_API_KEY,"openaikey");
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: "sk-proj-bbYm8SLTNMNqRJLsEgEhT3BlbkFJM3zY4Kdu2cArAqMlLGMq"
 });
 
 const GENERATE_THUMBNAIL_ACTION = "generateThumbnailAction";
@@ -77,13 +78,14 @@ export const generateAudioAction = action({
 
     const user = await ctx.auth.getUserIdentity();
 
+    console.log(user,"user is there ?")
     if (!user) {
       throw new Error("User not authenticated");
     }
 
     const defaultVoice = "alloy" as SpeechCreateParams["voice"];
 
-    const isSubscribed = await handleLimitations(ctx, user, voice);
+    const isSubscribed = await handleLimitations(ctx, user!, voice);
 
     const mp3 = await openai.audio.speech.create({
       model: "tts-1",
