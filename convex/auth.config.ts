@@ -1,7 +1,7 @@
 const authConfig = {
   providers: [
     {
-      domain: "https://allowing-quetzal-81.clerk.accounts.dev",
+      domain: "https://integral-squirrel-10.clerk.accounts.dev",
       applicationID: "convex",
     },
   ],
